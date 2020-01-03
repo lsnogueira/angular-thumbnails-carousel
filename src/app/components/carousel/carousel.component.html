@@ -1,0 +1,12 @@
+<div>
+  <div class="buttons-wrapper">
+    <button (click)="showPrev()">Show Prev</button>
+    <button (click)="showNext()">Show Next</button>
+  </div>
+  <ngx-gallery
+    [options]="options"
+    [images]="images"
+    #carousel
+  ></ngx-gallery>
+  
+</div>
