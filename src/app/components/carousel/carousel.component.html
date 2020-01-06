@@ -1,12 +1,17 @@
 <div>
-  <div class="buttons-wrapper">
-    <button (click)="showPrev()">Show Prev</button>
-    <button (click)="showNext()">Show Next</button>
+  <div class="carousel-wrapper">
+    <div class="buttons-wrapper">
+      <button (click)="showPrev()">Show Prev</button>
+      <button (click)="showNext()">Show Next</button>
+    </div>
+    <ngx-gallery [options]="options" [images]="images" #carousel></ngx-gallery>
   </div>
-  <ngx-gallery
-    [options]="options"
-    [images]="images"
-    #carousel
-  ></ngx-gallery>
-  
+  <div class="subtitle-wrapper">
+    <div
+      *ngFor="let title of imageTitle"
+      class="subtitle-block"
+    >
+      <p>{{ title.name }}</p>
+    </div>
+  </div>
 </div>
